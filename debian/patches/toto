@@ -1,0 +1,115 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ plasma-welcome (5.27.0-1) UNRELEASED; urgency=medium
+ .
+   [ Aurélien COUDERC ]
+   * New upstream release (5.27.0).
+   * Update build-deps and deps with the info from cmake.
+Author: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout https://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: (upstream|backport|vendor|other), (<patch-url>|commit:<commit-id>)
+Bug: <upstream-bugtracker-url>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: (no|not-needed|<patch-forwarded-url>)
+Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
+Reviewed-By: <name and email of someone who approved/reviewed the patch>
+Last-Update: 2023-02-17
+
+--- a/src/contents/ui/main.qml
++++ b/src/contents/ui/main.qml
+@@ -116,6 +116,7 @@
+         if (root.showingPlasmaUpdate) {
+             pageStack.push(plasmaUpdate);
+         } else {
++            pageStack.push(siductionWelcome);
+             pageStack.push(welcome);
+ 
+             if (!Controller.networkAlreadyConnected()) {
+@@ -154,6 +155,7 @@
+ 
+     PlasmaUpdate {id: plasmaUpdate; visible: false}
+ 
++    SiductionWelcome {id: siductionWelcome; visible: false}
+     Welcome {id: welcome; visible: false}
+     Network {id: network; visible: false}
+     SimpleByDefault {id: simpleByDefault; visible: false}
+--- /dev/null
++++ b/src/contents/ui/pages/SiductionWelcome.qml
+@@ -0,0 +1,56 @@
++/*
++ *  SPDX-FileCopyrightText: 2021 Felipe Kinoshita <kinofhek@gmail.com>
++ *  SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
++ *
++ *  SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
++ */
++
++import QtQuick 2.15
++import QtQuick.Controls 2.15 as QQC2
++import QtQuick.Layouts 1.15
++import org.kde.kirigami 2.15 as Kirigami
++import org.kde.plasma.welcome 1.0
++
++GenericPage {
++    heading: i18nc("@title", "Welcome to Debian!")
++    description: xi18nc("@info:usagetip", "Debian is a free and open-source desktop environment created by KDE, an international software community of volunteers. The Plasma desktop environment is simple by default for a smooth experience, but powerful when needed to help you really get things done. We hope you love it!")
++
++    topContent: [
++        Kirigami.UrlButton {
++            id: link
++            Layout.topMargin: Kirigami.Units.largeSpacing
++            text: i18nc("@action:button", "Learn more about the Debian community")
++            url: "https://community.kde.org/Welcome_to_KDE?source=plasma-welcome"
++        }
++    ]
++
++    Image {
++        anchors.centerIn: parent
++        anchors.verticalCenterOffset: -Kirigami.Units.gridUnit * 4
++        width: Kirigami.Units.gridUnit * 16
++        height: Kirigami.Units.gridUnit * 16
++        source: "logo-siduction.png"
++        fillMode: Image.PreserveAspectFit
++
++        QQC2.Label {
++            anchors.horizontalCenter: parent.horizontalCenter
++            anchors.top: parent.bottom
++            width: Math.round(parent.width * 0.75)
++            text: i18nc("@info", "The KDE mascot Konqi welcomes you to the KDE community!")
++            wrapMode: Text.Wrap
++            horizontalAlignment: Text.AlignHCenter
++        }
++
++        HoverHandler {
++            id: hoverhandler
++            cursorShape: Qt.PointingHandCursor
++        }
++        TapHandler {
++            onTapped: Qt.openUrlExternally(link.url)
++        }
++        QQC2.ToolTip {
++            visible: hoverhandler.hovered
++            text: i18nc("@action:button clicking on this takes the user to a web page", "Visit %1", link.url)
++        }
++    }
++}
+--- a/src/resources.qrc
++++ b/src/resources.qrc
+@@ -10,6 +10,7 @@
+         <file alias="PlasmaUpdate.qml">contents/ui/pages/PlasmaUpdate.qml</file>
+         <file alias="Network.qml">contents/ui/pages/Network.qml</file>
+         <file alias="NetworkPlasmaNM.qml">contents/ui/pages/network/NetworkPlasmaNM.qml</file>
++        <file alias="SiductionWelcome.qml">contents/ui/pages/SiductionWelcome.qml</file>
+         <file alias="Welcome.qml">contents/ui/pages/Welcome.qml</file>
+         <file alias="Discover.qml">contents/ui/pages/Discover.qml</file>
+         <file alias="SimpleByDefault.qml">contents/ui/pages/SimpleByDefault.qml</file>

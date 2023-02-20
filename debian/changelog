@@ -1,0 +1,42 @@
+plasma-welcome (5.27.0-1-hhl3.1) unstable; urgency=medium
+
+  [ Hendrik Lehmbruch ]
+  * fixing logo size
+
+ -- Hendrik lehmbruch <hendrikL@siduction.org>  Mon, 20 Feb 2023 16:01:25 +0100
+
+plasma-welcome (5.27.0-1-hhl3) unstable; urgency=medium
+
+  [ Hendrik Lehmbruch ]
+  * new logo
+
+ -- Hendrik lehmbruch <hendrikL@siduction.org>  Mon, 20 Feb 2023 15:50:10 +0100
+
+plasma-welcome (5.27.0-1-hhl2) unstable; urgency=medium
+
+  [ Hendrik Lehmbruch ]
+  * added welcome text
+
+ -- Hendrik lehmbruch <hendrikL@siduction.org>  Mon, 20 Feb 2023 15:01:33 +0100
+
+plasma-welcome (5.27.0-1-hhl1) unstable; urgency=medium
+
+  [ Hendrik Lehmbruch ]
+  * First changes for siduction
+
+ -- Hendrik lehmbruch <hendrikL@siduction.org>  Mon, 20 Feb 2023 14:11:30 +0100
+
+plasma-welcome (5.27.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.27.0).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sat, 18 Feb 2023 17:08:41 +0100
+
+plasma-welcome (5.26.90-1) unstable; urgency=medium
+
+  [ Rik Mills ]
+  * Initial release. (Closes: #1029532)
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 23 Jan 2023 23:34:46 +0100
