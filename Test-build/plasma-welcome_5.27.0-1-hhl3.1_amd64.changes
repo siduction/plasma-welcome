@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Mon, 20 Feb 2023 16:01:25 +0100
+Source: plasma-welcome
+Binary: plasma-welcome plasma-welcome-dbgsym
+Architecture: amd64
+Version: 5.27.0-1-hhl3.1
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Hendrik lehmbruch <hendrikL@siduction.org>
+Description:
+ plasma-welcome - KDE Plasma welcome center
+Changes:
+ plasma-welcome (5.27.0-1-hhl3.1) unstable; urgency=medium
+ .
+   [ Hendrik Lehmbruch ]
+   * fixing logo size
+Checksums-Sha1:
+ 0c8e3d42fa51fe3efebd6120ded95353f38424d0 835368 plasma-welcome-dbgsym_5.27.0-1-hhl3.1_amd64.deb
+ 412cba8bf94e90fd890fcdc32f92fa8d0638d7fd 21749 plasma-welcome_5.27.0-1-hhl3.1_amd64.buildinfo
+ c032462c6484f1854f348cbb160fe4b7e8b3db91 825520 plasma-welcome_5.27.0-1-hhl3.1_amd64.deb
+Checksums-Sha256:
+ da1877237fdb2427d0d65777989fd73752a82815fe918a115ba1306a0f0f2ca3 835368 plasma-welcome-dbgsym_5.27.0-1-hhl3.1_amd64.deb
+ 3f6c8ae23cca1aadbe34a5358b039b6b9f3eface8f99b401d5133208e4001cca 21749 plasma-welcome_5.27.0-1-hhl3.1_amd64.buildinfo
+ 182cc7b000478380e9f2381a0f8f9f1fab46555295d3fc39149c19e43ae937fa 825520 plasma-welcome_5.27.0-1-hhl3.1_amd64.deb
+Files:
+ 720be832f2095bc78044bf2ce8fc022a 835368 debug optional plasma-welcome-dbgsym_5.27.0-1-hhl3.1_amd64.deb
+ b9339fe6fab1b95d0acebe68594c010e 21749 kde optional plasma-welcome_5.27.0-1-hhl3.1_amd64.buildinfo
+ 0ea822e009dcf6eff89e6ab66abfd679 825520 kde optional plasma-welcome_5.27.0-1-hhl3.1_amd64.deb
