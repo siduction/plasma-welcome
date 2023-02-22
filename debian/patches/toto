@@ -5,6 +5,12 @@ Description: <short summary of the patch>
  information below has been extracted from the changelog. Adjust it or drop
  it.
  .
+  plasma-welcome (5.27.0-1.hhl3) UNRELEASED; urgency=medium
+ .
+   [ hendrik lehmbruch ]
+   * adopted for sidution
+Author: Hendrik Lehmbruch for the siduction Team <hendrikL@siduction.org>
+ .
  plasma-welcome (5.27.0-1) UNRELEASED; urgency=medium
  .
    [ Aurélien COUDERC ]

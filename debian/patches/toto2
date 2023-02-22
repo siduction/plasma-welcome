@@ -4,6 +4,14 @@ Description: <short summary of the patch>
  with other relevant fields (see below for details). To make it easier, the
  information below has been extracted from the changelog. Adjust it or drop
  it.
+
+ .
+  plasma-welcome (5.27.0-1.hhl3) UNRELEASED; urgency=medium
+ .
+   [ hendrik lehmbruch ]
+   * adopted for sidution
+Author: Hendrik Lehmbruch for the siduction Team <hendrikL@siduction.org>
+
  .
  plasma-welcome (5.27.0-1) UNRELEASED; urgency=medium
  .
@@ -33,7 +41,7 @@ Last-Update: 2023-02-17
  
  GenericPage {
 -    heading: i18nc("@title", "Welcome to KDE Plasma!")
-+    heading: i18nc("@title", "Welcome to KDE Plasmama!")
++    heading: i18nc("@title", "KDE Plasmama!")
      description: xi18nc("@info:usagetip", "Plasma is a free and open-source desktop environment created by KDE, an international software community of volunteers. The Plasma desktop environment is simple by default for a smooth experience, but powerful when needed to help you really get things done. We hope you love it!")
  
      topContent: [
@@ -44,7 +52,7 @@ Last-Update: 2023-02-17
          QStringLiteral("plasma-welcome"),
          // A displayable program name string.
 -        i18nc("@title", "Welcome to KDE Plasma"),
-+        i18nc("@title", "Welcome to KDE Plasmama"),
++        i18nc("@title", "KDE Plasma"),
          // The program version string.
          QStringLiteral(PLASMA_WELCOME_VERSION_STRING),
          // Short description of what the app does.
